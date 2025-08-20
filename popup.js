@@ -23,4 +23,15 @@ document.addEventListener("DOMContentLoaded", () => {
       btn.textContent = "Open Sidebar";
     }
   });
+
+//added here
+
+const optionsBtn = document.getElementById("optionsBtn");
+  optionsBtn.addEventListener("click", () => {
+    if (chrome.runtime.openOptionsPage) {
+      chrome.runtime.openOptionsPage();
+    } else {
+      window.open(chrome.runtime.getURL("options.html"));
+    }
+  });
 });

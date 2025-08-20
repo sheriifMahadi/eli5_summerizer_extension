@@ -8,5 +8,6 @@
   },
   "action": {
     "default_title": "ELI5 & Summarizer"
-  }
+  },
+  "options_page": "options.html"
 }

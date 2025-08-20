@@ -46,6 +46,9 @@ if (!window.toggleSidebar) {
         <button id="summarize-btn" style="flex:1; padding:10px; border:none; border-radius:6px; background:#ff9800; color:#fff; font-weight:bold; cursor:pointer;">Summarize</button>
       </div>
 
+      <!-- Open Options button -->
+  <button id="eli5-options" style="margin: 0 10px 10px 10px; padding:8px; border:none; border-radius:6px; background:#444; color:#fff; font-weight:bold; cursor:pointer;">Open Extension Options</button>
+
       <!-- Results -->
       <div style="flex:1; display:flex; flex-direction:column; margin:10px;">
         <div id="eli5-result" style="flex:1; overflow:auto; padding:10px; border:1px solid #333; border-radius:6px; background:#111; color:#fff;"></div>
@@ -56,6 +59,9 @@ if (!window.toggleSidebar) {
     document.body.style.marginRight = "350px"; // shift page content
     document.body.appendChild(sidebar);
 
+    document.getElementById("eli5-options").onclick = () => {
+      chrome.runtime.sendMessage({ action: "openOptionsPage" });
+    };
     // === Controls ===
     document.getElementById("eli5-close").onclick = () => {
       sidebar.remove();
