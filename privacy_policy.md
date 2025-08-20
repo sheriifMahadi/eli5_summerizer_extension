@@ -1,0 +1,1 @@
+ELI5 & Summarizer does not collect, transmit, or share any personal user data. The extension stores your API key locally using Chrome’s storage to enable its functionality. No personal information, browsing history, or usage data is collected or sent to any server by this extension. All processing is performed locally or via the API service you configure.
